@@ -3,6 +3,8 @@ LOCAL_PATH:= $(call my-dir)
 
 include $(CLEAR_VARS)
 
+LOCAL_LDFLAGS += -fPIC
+
 LOCAL_CPP_EXTENSION := .cc
 
 LOCAL_SRC_FILES := \
@@ -58,6 +60,7 @@ LOCAL_C_INCLUDES += $(LOCAL_PATH)/include
 
 LOCAL_MODULE := libyuv_static
 LOCAL_MODULE_TAGS := optional
+
 
 include $(BUILD_STATIC_LIBRARY)
 
